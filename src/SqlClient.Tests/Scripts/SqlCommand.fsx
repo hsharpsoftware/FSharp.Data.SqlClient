@@ -7,7 +7,7 @@ open System
 open FSharp.Data
 
 [<Literal>] 
-let connectionString = "Server=.;Database=AdventureWorks2012;Trusted_Connection=yes"
+let connectionString = "Server=(localdb)\MSSQLLocalDB;Database=AdventureWorks2012;Trusted_Connection=yes"
 [<Literal>] 
 let connectionStringName = "name=AdventureWorks"
 [<LiteralAttribute>]
@@ -156,7 +156,7 @@ let inline toMyRecord (x: 'Recrod) =
 [<Literal>]
 let getDatesQuery = "SELECT GETDATE() AS Now, GETUTCDATE() AS UtcNow"
 [<Literal>]
-let localhost = "Data Source=.;Integrated Security=True;"
+let localhost = "Data Source=(localdb)\MSSQLLocalDB;Integrated Security=True;"
 type GetDates = SqlCommandProvider<getDatesQuery,  localhost>
 
 open System.Data.SqlClient

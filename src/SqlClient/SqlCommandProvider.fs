@@ -106,7 +106,7 @@ type SqlCommandProvider(config : TypeProviderConfig) as this =
 
         let parameters = DesignTime.ExtractParameters(conn, sqlStatement, allParametersOptional)
 
-        let outputColumns = 
+        let outputColumns : Column list = 
             if resultType <> ResultType.DataReader
             then DesignTime.GetOutputColumns(conn, sqlStatement, parameters, isStoredProcedure = false)
             else []

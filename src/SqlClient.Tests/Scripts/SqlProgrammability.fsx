@@ -15,7 +15,7 @@ open FSharp.Data
 //[<Literal>] 
 //let prodConnectionString = ConnectionStrings.MasterDb
 
-type AdventureWorks = SqlProgrammabilityProvider<"Data Source=.;Initial Catalog = AdventureWorks2012;Integrated Security=True">
+type AdventureWorks = SqlProgrammabilityProvider<"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = AdventureWorks2012;Integrated Security=True">
 type dbo = AdventureWorks.dbo
 let x = 42.<AdventureWorks.Sales.``Units of Measure``.GBP>
 let y = 12.<AdventureWorks.Sales.``Units of Measure``.USD>
@@ -29,7 +29,7 @@ x.GetType().AssemblyQualifiedName
 //	    AND Y.ProductID = @salesOrderDetailProductid
 //	    AND (X.SpecialOfferID IS NOT NULL 
 //		    OR Y.SpecialOfferID IS NOT NULL)
-//	     ", "Data Source=.;Initial Catalog = AdventureWorks2012;Integrated Security=True">()
+//	     ", "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = AdventureWorks2012;Integrated Security=True">()
 
 //#r @"Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll"
 //
@@ -58,6 +58,6 @@ x.GetType().AssemblyQualifiedName
 
 //[ for c in dt2.Columns -> c.ColumnName, c.DataType.FullName ] = [ for c in dt.Columns -> c.ColumnName, c.DataType.FullName ]
 
-type Thermion = SqlProgrammabilityProvider<"Data Source=.;Initial Catalog = Thermion;Integrated Security=True">
+type Thermion = SqlProgrammabilityProvider<"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = Thermion;Integrated Security=True">
 
 

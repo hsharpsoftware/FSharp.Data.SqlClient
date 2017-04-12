@@ -1,7 +1,7 @@
 ﻿module FSharp.Data.ConnectionStrings 
 
 [<Literal>]
-let server = @"."
+let server = @"(localdb)\MSSQLLocalDB"
 
 [<Literal>]
 let AdventureWorksLiteral = @"Data Source=" + server + ";Initial Catalog=AdventureWorks2012;Integrated Security=True"

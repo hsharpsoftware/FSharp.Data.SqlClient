@@ -8,7 +8,7 @@
 open Microsoft.SqlServer.XEvent.Linq
 open System.Data.SqlClient
 
-let connection = "Data Source=.;Initial Catalog=master;Integrated Security=True"
+let connection = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True"
 
 let targetDatabase = "AdventureWorks2014"
 let xeSession = "XE_Alter"
